@@ -1,7 +1,36 @@
 body {
     margin: 0;
-    background: url(./images/clear.webp) no-repeat center center fixed;
+    background: no-repeat center center fixed;
     background-size: cover;
+}
+
+body.thunderstorm{
+    background-image: url(./images/lightning.gif);
+}
+
+
+body.drizzle{
+    background-image: url(./images/drizzle.gif);
+}
+
+body.rain{
+    background-image: url(./images/rain.gif);
+}
+
+body.snow{
+    background-image: url(./images/snow.gif);
+}
+
+body.atmosphere{
+    background-image: url(./images/fog.gif);
+}
+
+body.clear{
+    background-image: url(./images/clear.webp);
+}
+
+body.clouds{
+    background-image: url(./images/clouds.gif);
 }
 
 body, input, button {
@@ -33,6 +62,12 @@ body, input, button {
 .vertContainer {
     display: flex;
     flex-direction: column;
+}
+
+.subWrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
 }
 
 .gap {
@@ -77,4 +112,5 @@ button {
     height: 160px;
     width: 2px;
     background-color: white;
+    margin-left: 40px;
 }
