@@ -2,22 +2,73 @@ body {
     margin: 0;
     background: url(./images/clear.webp) no-repeat center center fixed;
     background-size: cover;
+}
+
+body, input, button {
     font-family:'Montserrat', sans-serif;
 }
 
 .positioning {
-    display: flex;
-    align-items: center;
+    display: inline-flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
     height: 100vh;
     padding-left: 200px;
 }
 
 .container {
     display: flex;
-    flex-direction: column;
     padding: 40px;
     border-radius: 40px;
+    gap: 20px;
+    align-items: center;
     color: white;
     background-color: rgba(0,0,0,0.4);
     font-size: 2rem;
+}
+
+.vertContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.inputContainer {
+    display: flex;
+    gap: 20px;
+}
+
+input#location {
+    flex: 1 1 auto;
+    background-color: rgba(0,0,0,0.4);
+    color: white;
+    border: 0px;
+    border-radius: 20px;
+    height: 40px;
+    padding-left: 40px;
+}
+
+input::placeholder {
+    color: white;
+}
+
+input:focus {
+    outline: 1px solid white;
+}
+
+button {
+    border-radius: 20px;
+    border: 0px;
+    padding: 0px 20px 0px 20px;
+    background-color: rgba(255,255,255,0.8);
+}
+
+#temperature {
+    font-size: 6rem;
+}
+
+#divider {
+    height: 160px;
+    width: 2px;
+    background-color: white;
 }

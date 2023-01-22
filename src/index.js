@@ -1,5 +1,8 @@
 import './style.css';
 
+const inputField = document.querySelector("#location");
+const searchButton = document.querySelector("#searchButton")
+
 async function fetchWeatherData(location) {
     try {
         const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${location}&appid=16962f48bc81e37b5f8eae8d6802cd48&units=metric`, {mode: `cors`});
@@ -30,10 +33,17 @@ function injectWeatherData(weatherData) {
     const humidityElem = document.querySelector("#humidity");
     const windElem = document.querySelector("#wind");
     weatherElem.textContent = "Weather: " + weatherData.weather[0].main;
-    temperatureElem.textContent = "Temperature: " + weatherData.temp;
+    temperatureElem.textContent = Math.round(weatherData.temp) + "°C";
     feelslikeElem.textContent = "Feels like: " + weatherData.feels_like;
     humidityElem.textContent = "Humidity: " + weatherData.humidity;
     windElem.textContent = "Wind: " + weatherData.wind;
 }
 
 fetchWeatherData("toronto");
+
+console.log(inputField);
+
+searchButton.addEventListener("click", () => {
+    const input = inputField.value;
+    fetchWeatherData(input);
+});
