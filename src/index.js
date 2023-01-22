@@ -18,6 +18,7 @@ async function fetchWeatherData(location) {
 
 const weatherDataFactory = (rawWeatherData) => {
     return {
+        name: rawWeatherData.name,
         weather: rawWeatherData.weather,
         temp: rawWeatherData.main.temp,
         feels_like: rawWeatherData.main.feels_like,
@@ -27,11 +28,13 @@ const weatherDataFactory = (rawWeatherData) => {
 }
 
 function injectWeatherData(weatherData) {
+    const nameElem = document.querySelector("#name")
     const weatherElem = document.querySelector("#weather");
     const temperatureElem = document.querySelector("#temperature");
     const feelslikeElem = document.querySelector("#feels_like");
     const humidityElem = document.querySelector("#humidity");
     const windElem = document.querySelector("#wind");
+    nameElem.textContent = weatherData.name;
     weatherElem.textContent = "Weather: " + weatherData.weather[0].main;
     temperatureElem.textContent = Math.round(weatherData.temp) + "°C";
     feelslikeElem.textContent = "Feels like: " + weatherData.feels_like;

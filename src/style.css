@@ -18,19 +18,25 @@ body, input, button {
 }
 
 .container {
-    display: flex;
     padding: 40px;
     border-radius: 40px;
-    gap: 20px;
-    align-items: center;
     color: white;
     background-color: rgba(0,0,0,0.4);
     font-size: 2rem;
 }
 
+.horiContainer {
+    display: flex;
+    align-items: center;
+}
+
 .vertContainer {
     display: flex;
     flex-direction: column;
+}
+
+.gap {
+    gap: 20px;
 }
 
 .inputContainer {
