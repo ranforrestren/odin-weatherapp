@@ -1,0 +1,22 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack --progress --mode=production",
+    "watch": "webpack --progress --watch",
+    "deploy": "gh-pages --dist 'dist' --branch 'gh-pages'"
+  },
+  "repository": "git@github.com:ranforrestren/odin-weatherapp.git",
+  "author": "ranforrestren <ranforrestren@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "css-loader": "^6.7.3",
+    "gh-pages": "^5.0.0",
+    "html-webpack-plugin": "^5.5.0",
+    "style-loader": "^3.3.1",
+    "webpack": "^5.75.0",
+    "webpack-cli": "^5.0.1"
+  }
+}
